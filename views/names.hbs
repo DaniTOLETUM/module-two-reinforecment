@@ -1,0 +1,12 @@
+<h2>A list of items</h2>
+{{#each userDoc}}
+<ul>
+  <li>
+    {{this.firstName}}
+    {{!-- //añadimos un a para poner un enlace a la ruta /details --}}
+    <a href="/details/{{this._id}}">See details</a> 
+    <a href="/edit/{{this._id}}">Edit</a> 
+  </li>
+</ul>
+{{/each}}
+

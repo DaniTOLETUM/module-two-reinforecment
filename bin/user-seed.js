@@ -1,8 +1,10 @@
 const mongoose = require("mongoose")
-const User = require("../models/user-model")
+const User = require("../models/user-model") //importamos el modelo de usuario desde user-models. Es llamado de la misma forma
 
 mongoose
-  .connect('mongodb://localhost/connection-reinforcement', { useNewUrlParser: true })
+  .connect('mongodb://localhost/connection-reinforcement', {
+    useNewUrlParser: true
+  })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -11,8 +13,7 @@ mongoose
   });
 
 
-data = [
-  {
+data = [{
     firstName: "Abi",
     description: "I'm here to help you learn"
   },
